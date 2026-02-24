@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuários</title>
-</head>
-<body>
+@extends('layouts.app')
+@section('title', 'Listagem de usuários')
+
+@section('content')
     <h1>{{ $greting }}</h1>
-    {{ dd($user) }}
-</body>
-</html>
+
+        @foreach ($users as $user)
+            <div>{{ $user->name }} - ({{ $user->email }})</div>
+        @endforeach
+@endsection
+
+

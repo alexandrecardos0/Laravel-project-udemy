@@ -1,12 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Show</title>
-</head>
-<body>
+@extends('layouts.app')
+@section('title', 'Mostrando usuário' . $user->name)
+
+@section('content')
     <h1>Mostrar usuário {{ $user->name }}</h1>
-    {{ dd($user) }}
-</body>
-</html>
+
+        @if ($user->id === 1)
+            <div>Sou admin</div>
+        @else
+            <div>Não sou admin</div>
+        @endif
+@endsection
+
+
