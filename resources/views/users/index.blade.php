@@ -2,10 +2,12 @@
 @section('title', 'Listagem de usuários')
 
 @section('content')
-    <h1>{{ $greting }}</h1>
+
+    <img width="300" src="{{ Vite::asset('resources/images/1.png') }}" alt="">
+    <h1 class="title">{{ $greting }}</h1>
 
         @foreach ($users as $user)
-            <div>{{ $user->name }} - ({{ $user->email }})</div>
+            <div class="user-name">{{ $user->name }} - ({{ $user->email }})</div>
         @endforeach
 @endsection
 

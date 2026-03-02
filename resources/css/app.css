@@ -9,3 +9,12 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+.title {
+    color: #9479FF;
+    font-size: 32px;
+    font-weight: 700;
+}
+.user-name{
+    color: #000080;
+}

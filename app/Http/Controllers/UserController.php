@@ -13,7 +13,7 @@ class UserController extends Controller
         // Regras de Negócio
         // Variaveis e conteúdos -> view
         return view('users.index', [
-            'greting' => 'Hello World!',
+            'greting' => 'Listagem de usuários',
             'users' => $users
         ]);
     }
