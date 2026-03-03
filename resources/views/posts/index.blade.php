@@ -16,8 +16,10 @@
         <ul class="post-list">
             @foreach ($posts as $post)
                 <li class="post-item">
+                    <a href="{{ route('posts.show', $post->id) }}">
                     <h2 class="post-title">{{ $post->title }}</h2>
                     <p class="post-body">{{ $post->body }}</p>
+                    </a>
                 </li>
             @endforeach
         </ul>
