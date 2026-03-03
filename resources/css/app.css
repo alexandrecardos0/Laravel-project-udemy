@@ -18,3 +18,108 @@
 .user-name{
     color: #000080;
 }
+/* Botões */
+  .btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      text-decoration: none;
+      display: inline-block;
+  }
+
+  .btn-primary {
+      background-color: #9479FF;
+      color: white;
+  }
+
+  .btn-primary:hover {
+      background-color: #7a5ed9;
+  }
+
+  /* Links como botão */
+  .btn-link {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-bottom: 20px;
+  }
+
+  .btn-link:hover {
+      background-color: #45a049;
+  }
+
+  /* Formulários */
+  .form-group {
+      margin-bottom: 15px;
+  }
+
+  .form-label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+      color: #333;
+  }
+
+  .form-input,
+  .form-textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 14px;
+  }
+
+  .form-input:focus,
+  .form-textarea:focus {
+      border-color: #9479FF;
+      outline: none;
+  }
+
+  /* Mensagens */
+  .alert {
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+  }
+
+  .alert-success {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+  }
+
+  .alert-error {
+      color: red;
+      font-size: 12px;
+      margin-top: 5px;
+  }
+
+  /* Lista de posts */
+  .post-list {
+      list-style: none;
+      padding: 0;
+  }
+
+  .post-item {
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+  }
+
+  .post-title {
+      color: #333;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+  }
+
+  .post-body {
+      color: #666;
+      line-height: 1.6;
+  }
