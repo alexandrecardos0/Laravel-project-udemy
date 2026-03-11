@@ -59,7 +59,9 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return view('posts.edit', [
+            'post' => $post
+        ]);
     }
 
     /**
@@ -67,14 +69,26 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $validated = $request->validate( [
+            'title' => 'required|string|min:5|max:255',
+            'body' => 'required|string|min:10',
+        ]);
+
+        $post->update($validated);
+
+        return redirect()->route('posts.index')
+            ->with('success', 'Post atualizado');
     }
+
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
+
+        return redirect()->route('posts.index')
+            ->with('success', 'Post deletado');
     }
 }

@@ -16,10 +16,22 @@
         <ul class="post-list">
             @foreach ($posts as $post)
                 <li class="post-item">
-                    <a href="{{ route('posts.show', $post->id) }}">
-                    <h2 class="post-title">{{ $post->title }}</h2>
-                    <p class="post-body">{{ $post->body }}</p>
-                    </a>
+                    <div>
+                        <div>
+                            <a href="{{ route('posts.show', $post->id) }}">
+                            <h2 class="post-title">{{ $post->title }}</h2>
+                            <p class="post-body">{{ $post->body }}</p>
+                            </a>
+                        </div>
+                        <div class="post-actions">
+                            <a href="{{ route('posts.edit', $post->id) }}" class="btn-edit">Editar</a>
+                                <form action="{{ route('posts.destroy', $post->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" onclick="return confirm('Tem certeza que deseja deletar o Post?')">Deletar</button>
+                                </form>
+                        </div>
+                    </div>
                 </li>
             @endforeach
         </ul>
